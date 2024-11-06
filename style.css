@@ -1,0 +1,132 @@
+﻿body {
+    margin: 5px 100px 100px;
+    font-family: Arial, sans-serif;
+    background-color: #bcafed;
+    background-image: url('https://i.imgur.com/6TpHvZ3.jpg');
+    background-size: cover;
+}
+
+.main-content h1 {
+    text-align: center; /* Center the text */
+
+    font-size: 96px; /* Set font size to 48px */
+    height: 220px;
+    width: 1400px;
+    color: white;
+    margin: 0 0; /* Optional: Add some vertical spacing */
+    background-image: url('https://i.imgur.com/IV9Eid8.png');
+    background-size: 100% 100%;
+}
+
+
+.sidebar {
+    height: 460px; /* Full viewport height */
+    width: 225px; /* Set the width of the sidebar */
+    position: fixed; /* Fix it to the side */
+    top: 0;
+    left: 5;
+    background-color: #4b27db; /* Sidebar background color */
+    color: #fff;
+    padding: 15px;
+    box-shadow: -14px 18px 8px rgba(0,0,0,1); /* Optional shadow for better appearance */
+}
+
+    .sidebar img.sidebar-image {
+        width: 100%; /* Make the image width the same as the sidebar */
+        margin-top: auto; /* Push image to the bottom */
+    }
+
+.sidebar2 {
+    height: 95px; /* Full viewport height */
+    width: 80px; /* Set the width of the sidebar */
+    position: fixed; /* Fix it to the side */
+    top: 0;
+    left: 0;
+    background-color: #4b27db; /* Sidebar background color */
+    color: #fff;
+    padding: 0px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3); /* Optional shadow for better appearance */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .sidebar ul li {
+        margin: 15px 0;
+    }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+            .sidebar ul li a:hover {
+                text-decoration: underline;
+            }
+
+.sidebar2 ul {
+    list-style: none;
+    padding-left: 0.5em;
+}
+
+    .sidebar2 ul li {
+        margin: 15px 0;
+    }
+
+        .sidebar2 ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+            .sidebar2 ul li a:hover {
+                text-decoration: underline;
+            }
+
+.main-content {
+    margin-left: 300px; /* Offset content by the width of the sidebar */
+    padding: 20px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the boxes horizontally */
+}
+
+.box {
+    width: 30%; /* Set width of boxes */
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #4b27db; /* Background color for the boxes */
+    color: #fff;
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: -15px 20px 18px rgba(0, 0, 0, 4); /* Add a shadow for depth */
+    transition: transform 0.2s; /* Add transition for hover effect */
+}
+
+    .box:hover {
+        transform: scale(1.5); /* Slightly enlarge the box on hover */
+    }
+
+    /* Zig-zag effect */
+    .box:nth-child(odd) {
+        transform: translateX(-425px);
+        /* Shift odd boxes to the left */
+    }
+
+    .box:nth-child(even) {
+        transform: translateX(165px);
+        transform: translateY(-160px); /* Shift even boxes to the right */
+    }
+
+.boxh1 {
+}
