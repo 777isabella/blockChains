@@ -35,7 +35,7 @@ body::before {
     position: fixed; /* Fix it to the side */
     top: 0;
     left: 5;
-    background-color: rgba(75, 39, 219, 0.6); /* Sidebar background color */
+    background-color: #4b27db; /* Solid background color for the sidebar */
     color: #fff;
     padding: 15px;
     box-shadow: -14px 18px 8px rgba(0, 0, 0, 1); /* Optional shadow for appearance */
@@ -52,7 +52,7 @@ body::before {
     position: fixed; /* Fix it to the side */
     top: 0;
     left: 0;
-    background-color: #4b27db; /* Sidebar background color */
+    background-color: #4b27db; /* Solid background color */
     color: #fff;
     padding: 0px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow for appearance */
@@ -108,21 +108,22 @@ body::before {
 
 .box-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack boxes vertically */
     align-items: center; /* Center the boxes horizontally */
 }
 
 .box {
     width: auto; /* Let the box size itself based on content */
-    max-width: 100%; /* Ensure the box doesn’t exceed its container */
+    max-width: 90%; /* Ensure the box doesn’t exceed the parent container width */
     padding: 15px;
-    margin: 20px 0;
-    background-color: #4b27db; /* Box background color */
+    margin: 20px 0; /* Add spacing between boxes */
+    background-color: #4b27db; /* Solid background color */
     color: #fff;
     border-radius: 4px; /* Rounded corners */
-    box-shadow: -15px 20px 18px rgba(0, 0, 0, 0.4); /* Add a shadow for depth */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4); /* Add a shadow for depth */
     transition: transform 0.2s; /* Add transition for hover effect */
     text-align: center; /* Center content within the box */
+    position: relative; /* Ensure transforms don't cause overlapping */
 }
 
 .box iframe {
@@ -132,15 +133,14 @@ body::before {
 }
 
 .box:hover {
-    transform: scale(1.1); /* Slightly enlarge the box on hover */
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
 }
 
-/* Zig-zag effect */
+/* Optional Zig-zag layout effect */
 .box:nth-child(odd) {
-    transform: translateX(-425px); /* Shift odd boxes to the left */
+    margin-left: -20px; /* Small left adjustment for odd boxes */
 }
 
 .box:nth-child(even) {
-    transform: translateX(165px);
-    transform: translateY(-160px); /* Shift even boxes to the right */
+    margin-left: 20px; /* Small right adjustment for even boxes */
 }
