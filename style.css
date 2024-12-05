@@ -102,17 +102,21 @@
     align-items: center; /* Center the boxes horizontally */
 }
 
+
 .box {
-    width: 30%; /* Set width of boxes */
-    padding: 15px;
-    margin: 20px 0;
-    background-color: #4b27db; /* Background color for the boxes */
-    color: #fff;
-    border-radius: 4px; /* Rounded corners */
-    box-shadow: -15px 20px 18px rgba(0, 0, 0, 4); /* Add a shadow for depth */
-    transition: transform 0.2s; /* Add transition for hover effect */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+    padding: 20px;          /* Add some padding for spacing */
+    margin: 10px;           /* Space between boxes */
+    display: inline-block;  /* Allow the box to resize dynamically */
+    width: auto;            /* Automatically adjust width based on content */
+    max-width: 100%;        /* Prevent the box from exceeding container size */
+    text-align: center;     /* Center-align content (optional) */
 }
 
+.box iframe {
+    max-width: 100%;        /* Make the video responsive */
+    height: auto;           /* Maintain aspect ratio */
+}
     .box:hover {
         transform: scale(1.5); /* Slightly enlarge the box on hover */
     }
