@@ -1,61 +1,63 @@
 body {
-    margin: 5px 100px 100px;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    position: relative; /* Needed for absolute positioning of the pseudo-element */
+  margin: 5px 100px 100px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  position: relative;  /* Needed for absolute positioning of the pseudo-element */
 }
 
 body::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -220px;
-    width: 150%;
-    height: 150%;
-    background-image: url('https://i.imgur.com/6TpHvZ3.jpg');
-    background-size: cover;
-    opacity: 0.65; /* Set opacity of background image */
-    z-index: -1; /* Ensure the background image is behind content */
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -220px;
+  width: 150%;
+  height: 150%;
+  background-image: url('https://i.imgur.com/6TpHvZ3.jpg');
+  background-size: cover;
+  opacity: 0.65;  /* Set opacity of background image */
+  z-index: -1;   /* Ensure the background image is behind content */
 }
 
+
 .main-content h1 {
-    text-align: center; /* Center the text */
-    font-size: 96px; /* Set font size */
+    text-align: center;/* Center the text */
+      
+     font-size: 96px; /* Set font size to 48px */
     height: 220px;
     width: 1400px;
-    color: white;
+      color: white;
     margin: 0 0; /* Optional: Add some vertical spacing */
-    background-image: url('https://i.imgur.com/IV9Eid8.png');
-    background-size: 100% 100%;
+   background-image: url('https://i.imgur.com/IV9Eid8.png');
+   background-size: 100% 100%;
 }
 
 .sidebar {
-    height: 460px; /* Sidebar height */
-    width: 225px; /* Sidebar width */
+    height: 460px; /* Full viewport height */
+    width: 225px; /* Set the width of the sidebar */
     position: fixed; /* Fix it to the side */
     top: 0;
     left: 5;
-    background-color: #4b27db; /* Solid background color for the sidebar */
+    background-color: rgba(75,39,219,0.6); /* Sidebar background color */
     color: #fff;
     padding: 15px;
-    box-shadow: -14px 18px 8px rgba(0, 0, 0, 1); /* Optional shadow for appearance */
+    box-shadow: -14px 18px 8px rgba(0,0,0,1); /* Optional shadow for better appearance */
 }
 
 .sidebar img.sidebar-image {
-    width: 100%; /* Make the image fit the sidebar width */
+    width: 100%; /* Make the image width the same as the sidebar */
     margin-top: auto; /* Push image to the bottom */
 }
 
 .sidebar2 {
-    height: 95px; /* Sidebar height */
-    width: 80px; /* Sidebar width */
+    height: 95px; /* Full viewport height */
+    width: 80px; /* Set the width of the sidebar */
     position: fixed; /* Fix it to the side */
     top: 0;
     left: 0;
-    background-color: #4b27db; /* Solid background color */
+    background-color: #4b27db; /* Sidebar background color */
     color: #fff;
     padding: 0px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow for appearance */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3); /* Optional shadow for better appearance */
 }
 
 .sidebar h2 {
@@ -108,39 +110,36 @@ body::before {
 
 .box-container {
     display: flex;
-    flex-direction: column; /* Stack boxes vertically */
+    flex-direction: column;
     align-items: center; /* Center the boxes horizontally */
 }
 
 .box {
-    width: auto; /* Let the box size itself based on content */
-    max-width: 90%; /* Ensure the box doesn’t exceed the parent container width */
+    width: 30%; /* Set width of boxes */
     padding: 15px;
-    margin: 20px 0; /* Add spacing between boxes */
-    background-color: #4b27db; /* Solid background color */
+    margin: 20px 0;
+    background-color: #4b27db; /* Background color for the boxes */
     color: #fff;
     border-radius: 4px; /* Rounded corners */
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4); /* Add a shadow for depth */
+    box-shadow: -15px 20px 18px rgba(0, 0, 0, 4); /* Add a shadow for depth */
     transition: transform 0.2s; /* Add transition for hover effect */
-    text-align: center; /* Center content within the box */
-    position: relative; /* Ensure transforms don't cause overlapping */
-}
-
-.box iframe {
-    width: 100%; /* Make the video scale within the box */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 560px; /* Constrain the video width */
 }
 
 .box:hover {
-    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    transform: scale(1.5); /* Slightly enlarge the box on hover */
 }
 
-/* Optional Zig-zag layout effect */
+/* Zig-zag effect */
 .box:nth-child(odd) {
-    margin-left: -20px; /* Small left adjustment for odd boxes */
+    transform: translateX(-425px);
+  /* Shift odd boxes to the left */
 }
 
 .box:nth-child(even) {
-    margin-left: 20px; /* Small right adjustment for even boxes */
+    transform: translateX(165px);
+    transform: translateY(-160px);/* Shift even boxes to the right */
+}
+
+.boxh1 {
+  
 }
