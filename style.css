@@ -140,7 +140,7 @@ body::before {
     transform: translateY(-160px);/* Shift even boxes to the right */
 }
 .boxs {
-    width: 80%; /* Set width of boxes */
+    width: 1000px; /* Set width of boxes */
     padding: 15px;
     margin: 20px 0;
     background-color: #4b27db; /* Background color for the boxes */
