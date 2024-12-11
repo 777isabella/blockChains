@@ -131,24 +131,11 @@ body::before {
 
 /* Zig-zag effect */
 .box:nth-child(odd) {
-    transform: translateX(-425px);
+    transform: translateX(-450px);
   /* Shift odd boxes to the left */
 }
 
 .box:nth-child(even) {
-    transform: translateX(165px);
-    transform: translateY(-160px);/* Shift even boxes to the right */
-}
-.boxs {
-    width: 75%; /* Set width of boxes */
-    padding: 15px;
-    margin: 20px 0;
-    background-color: #4b27db; /* Background color for the boxes */
-    color: #fff;
-    border-radius: 4px; /* Rounded corners */
-    box-shadow: -15px 20px 18px rgba(0, 0, 0, 4); /* Add a shadow for depth */
-    transition: transform 0.2s; /* Add transition for hover effect */
-}
-.boxh1 {
-  
+    transform: translateX(-550px);
+    transform: translateY(12px);/* Shift even boxes to the right */
 }
