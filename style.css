@@ -109,9 +109,9 @@ body::before {
 }
 
 .box-container {
-    position: relative; /* Make it relative to position boxes */
-    width: 1400px;  /* Full width of the container */
-    height: 100%; /* Ensure it has enough height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the boxes horizontally */
 }
 
 .box {
@@ -123,7 +123,6 @@ body::before {
     border-radius: 4px; /* Rounded corners */
     box-shadow: -15px 20px 18px rgba(0, 0, 0, 4); /* Add a shadow for depth */
     transition: transform 0.2s; /* Add transition for hover effect */
-    position: absolute; /* Fix boxes in position */
 }
 
 .box:hover {
@@ -132,25 +131,24 @@ body::before {
 
 /* Zig-zag effect */
 .box:nth-child(odd) {
-    top: 50px; /* Position for odd boxes */
-    left: 5%;  /* Anchor to 20% from the left */
+    transform: translateX(-425px);
+  /* Shift odd boxes to the left */
 }
 
 .box:nth-child(even) {
-    top: 150px; /* Position for even boxes */
-    left: 45%;  /* Anchor to 60% from the left */
+    transform: translateX(165px);
+    transform: translateY(-160px);/* Shift even boxes to the right */
 }
-/* Second set of boxes (shift them down below the first set) */
-.box:nth-child(3) {
-    top: 500px;  /* Shift this box down to start below the first set */
-    left: 10%;  /* Keep the left position consistent */
+.boxs {
+    width: 75%; /* Set width of boxes */
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #4b27db; /* Background color for the boxes */
+    color: #fff;
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: -15px 20px 18px rgba(0, 0, 0, 4); /* Add a shadow for depth */
+    transition: transform 0.2s; /* Add transition for hover effect */
 }
-
-.box:nth-child(4) {
-    top: 500px;  /* Same vertical position for the fourth box */
-    left: 50%;  /* Same left position */
-}
-
 .boxh1 {
   
 }
