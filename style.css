@@ -139,7 +139,16 @@ body::before {
     transform: translateX(165px);
     transform: translateY(-160px);/* Shift even boxes to the right */
 }
-
+.boxs {
+    width: 80%; /* Set width of boxes */
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #4b27db; /* Background color for the boxes */
+    color: #fff;
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: -15px 20px 18px rgba(0, 0, 0, 4); /* Add a shadow for depth */
+    transition: transform 0.2s; /* Add transition for hover effect */
+}
 .boxh1 {
   
 }
