@@ -32,7 +32,7 @@ body::before {
 }
 
 .sidebar {
-    height: 460px; /* Full viewport height */
+    height: 490px; /* Full viewport height */
     width: 225px; /* Set the width of the sidebar */
     position: fixed; /* Fix it to the side */
     top: 0;
