@@ -44,8 +44,7 @@ body::before {
 }
 
 .sidebar img.sidebar-image {
-    height: 90%;
-    width: 90%; /* Make the image width the same as the sidebar */
+    width: 100%; /* Make the image width the same as the sidebar */
     margin-top: auto; /* Push image to the bottom */
 }
 
